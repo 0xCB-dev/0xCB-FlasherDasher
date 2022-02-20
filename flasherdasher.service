@@ -1,0 +1,12 @@
+[Unit]
+Description=FlasherDasher ICSP programmer
+After=syslog.target network.target pigpiod.service
+
+[Service]
+WorkingDirectory=/root
+ExecStart=/root/flash.sh
+
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=multi-user.target

@@ -1,23 +1,23 @@
-# WIP!!!
-# 0xcb-FlasherDasher
-## Raspberry Pi ISP Flasher HAT
+# ISP Flasher
 
-Licence | OSHWA
-:-------------------------:|:-------------------------:
-![](https://github.com/0xCB-dev/0xcb-1337/blob/main/LICENSE.svg) | TBD
+## High Speed ISP flasher using the SPI of a Raspberry Pi
 
-### Assembly:
+### Used Hardware
 
-You can use the [humanpnp](https://files.0xcb.dev/0xCB/flasherdasher/humanpnp.html) to easily place components.
+- Raspberry Pi3b+ (any pi with the new header layout and SPI will do)
+- this [case](https://www.prusaprinters.org/prints/15876-raspberry-pi-3-sleeve-case/files)
+- Sparkfun Raspberry Pi Shield: [DEV-14747](https://www.sparkfun.com/products/14747)
+- ISP adapters in this repo
 
-### PCB:
-KiCad 6
-[Schematic](https://github.com/0xCB-dev/0xcb-1337/blob/main/rev1.0/flasherdasher-schematic.pdf)
+### Setup
 
-Top | Bottom
-:-------------------------:|:-------------------------:
-![](https://github.com/0xCB-dev/0xCB-FlasherDasher/blob/main/rev1.0/flasherdasher.top.png)  |  ![](https://github.com/0xCB-dev/0xcb-1337/blob/main/rev1.0/flasherdasher.bottom.png)
+- install OS to SD or USB: I used [DietPI](https://dietpi.com/) but you can use anything you like.
+- Enable SPI: `nano /boot/config.txt` add / edit `dtparam=spi=on` and `reboot`
+- install avrdude with SPI enabled following this [guide](http://kevincuzner.com/2013/05/27/raspberry-pi-as-an-avr-programmer/)
+- place flash.sh in /root/ and `chmod +x /root/flash.sh`
+- add service `nano /etc/systemd/system/flasherdasher.service` and paste in the content of flasherdasher.service in this repo. `systemctl enable --now flasherdasher`
+- format a USB stick in FAT32 and get the UUID with `blkid` 
+- place the config on the USB stick and edit the UUID 
+- add your hex to the USB and edit the fuse bits, firmware name, lock bit and flashing speeds to your liking
 
-#### BOM:
-| References                                        | Value                            | Quantity |Part Nb.          |
-|---------------------------------------------------|----------------------------------|----------|------------------|
+## Happy flashing!

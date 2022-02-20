@@ -1,0 +1,24 @@
+#FW (usb gets mounted as /media/flash)
+firmware="/media/flash/0xcb_static_bongocat_prod.hex"
+#firmware="/media/flash/0xcb_1337_conor_production.hex"
+
+#IC
+DEVICE=m328p
+#DEVICE=m32u4
+
+#FUSE BITS https://eleccelerator.com/fusecalc/fusecalc.php?chip=atmega328p
+#m328p
+HIGH_FUSE=0xD0
+LOW_FUSE=0xF7
+EXT_FUSE=0x04
+LOCK=0x3F
+#m32u4
+#HIGH_FUSE=0xD9
+#LOW_FUSE=0x5E
+#EXT_FUSE=0xC0
+#LOCK=0x3F
+
+#speed
+fusebaud=125000
+firmbaud=3500000
+lockbaud=3500000
