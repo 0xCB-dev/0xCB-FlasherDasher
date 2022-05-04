@@ -766,7 +766,7 @@
     (property "Value" "ATmega328-P" (id 1) (at 107.315 105.4099 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Socket:DIP_Socket-28_W6.9_W7.62_W10.16_W12.7_W13.5_3M_228-4817-00-0602J" (id 2) (at 123.825 103.505 0)
+    (property "Footprint" "" (id 2) (at 123.825 103.505 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" (id 3) (at 123.825 103.505 0)
@@ -1125,7 +1125,7 @@
       (reference "R1") (unit 1) (value "10k") (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal")
     )
     (path "/0c96e642-b7e3-494e-a132-98e02e803b47"
-      (reference "U1") (unit 1) (value "ATmega328-P") (footprint "Socket:DIP_Socket-28_W6.9_W7.62_W10.16_W12.7_W13.5_3M_228-4817-00-0602J")
+      (reference "U1") (unit 1) (value "ATmega328-P") (footprint "Socket:DIP_Socket-28_W11.9_W12.7_W15.24_W17.78_W18.5_3M_228-1277-00-0602J")
     )
     (path "/74fd1e5e-eaed-44c7-b443-9c8aaba887bc"
       (reference "Y1") (unit 1) (value "16MHz") (footprint "Crystal:Crystal_HC49-4H_Vertical")
